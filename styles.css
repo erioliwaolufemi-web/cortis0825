@@ -1,3 +1,19 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 2. Use 'border-box' so padding doesn't push width wider than 100% */
+* {
+    box-sizing: border-box;
+}
+
+/* 3. Make containers fluid instead of fixed */
+.container {
+    width: 95%; /* Leave a little breathing room on the sides */
+    max-width: 1200px; /* But don't let it get crazy wide on big monitors */
+    margin: 0 auto;
+}
 /* Custom Properties for K-Pop Glowroom Theme */
 :root {
     --primary-color: #ff007f; /* Neon Pink/Fuchsia */
@@ -291,4 +307,31 @@ nav a:hover {
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) { text-align: left; }
     .timeline-item:nth-child(even)::after { left: 15px; }
+}
+/* --- MOBILE RESPONSIVENESS --- */
+
+@media (max-width: 768px) {
+    /* Stack the navigation links vertically */
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* Change 3-column grids into 1-column stacks */
+    .member-grid, .channel-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Make text smaller so it doesn't wrap weirdly */
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    
+    /* Give buttons more space for fingers to tap */
+    .cta-button {
+        width: 100%;
+        padding: 15px;
+    }
 }
