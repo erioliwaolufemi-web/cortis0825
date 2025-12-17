@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Cortis Glowroom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">CORTIS GLOWROOM</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="members.html">Members</a>
+            <a href="media.html">Media Vault</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="about.html">About Cortis</a>
+            <a href="register.html" class="nav-button glow-on-hover">Join COER</a>
+        </nav>
+    </header>
+
+    <section class="register-form-section">
+        <h2>Register Your COER ID</h2>
+        <p>Join the fastest-growing Cortis fandom community and unlock all channels!</p>
+
+        <div class="form-container">
+            <form id="registrationForm" class="glow-form">
+                <div class="form-group">
+                    <label for="username">COER Username</label>
+                    <input type="text" id="username" name="username" required minlength="4">
+                    <small id="usernameError" class="error-text"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <small id="emailError" class="error-text"></small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required minlength="8">
+                    <small id="passwordError" class="error-text"></small>
+                </div>
+                <div class="form-group">
+                    <label for="faveMember">Favorite Cortis Member (Optional)</label>
+                    <select id="faveMember" name="faveMember">
+                        <option value="">Select a Member</option>
+                        <option value="A">Martins</option>
+                        <option value="B">James</option>
+                        <option value="C">Juhoon</option>
+                        <option value="D">Seonghyeon</option>
+                         <option value="E">Keonho</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="cta-button secondary full-width">Create Glowroom ID</button>
+            </form>
+            
+            <div id="successMessage" class="hidden success-message">
+                <h3>✨ Registration Successful! ✨</h3>
+                <p>Welcome to the Glowroom! Your account has been saved securely.</p>
+                <a href="index.html" class="cta-button">Go Home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cortis Glowroom Fan Community. Built by Fans for Fans.</p>
+    </footer>
+
+    <script src="register.js"></script>
+</body>
+</html>
